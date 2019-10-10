@@ -14,6 +14,26 @@ export default new Router({
       component: Home
     },
     {
+      path: '/historia',
+      name: 'historia'
+      // component: Historia
+    },
+    {
+      path: '/manga',
+      name: 'manga',
+      component: () => import(/* webpackChunkName: "about" */ './views/Manga.vue')
+    },
+    {
+      path: '/anime',
+      name: 'anime'
+      // component: Historia
+    },
+    {
+      path: '/musica',
+      name: 'musica'
+      // component: Historia
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
