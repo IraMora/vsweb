@@ -2,30 +2,57 @@
     <section>
         <div id="manga">
             <h2>Manga</h2>
-            <!-- <div v-for="item in 19" :key="item">
-                {{item}}
-            </div> -->     
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    <a class="nav-link active" id="vk-tab" data-toggle="tab" 
+                    href="#vk" role="tab" aria-controls="vk" 
+                    aria-selected="true">Vampire Knight</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    <a class="nav-link" id="memory-tab" data-toggle="tab" 
+                    href="#memory" role="tab" aria-controls="memory" 
+                    aria-selected="false">Memories</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">tabs 1</div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
+                <div class="tab-pane fade show active" id="vk" role="tabpanel" 
+                aria-labelledby="vk-tab"><VK /></div>
+                <div class="tab-pane fade" id="memory" role="tabpanel" 
+                aria-labelledby="memory-tab">Vampire Knight Memories</div>
             </div>  
         </div>
     </section>
 </template>
+<script>
+// @ is an alias to /src
+import VK from '@/components/vk.vue'
+
+export default {
+  components: { VK }
+}
+</script>
 <style lang="scss" scoped>
 section{
-    padding-top: 5rem;
+    padding: 5rem 0;  
+}
+ul{border:none;}
+ul li{
+    background: #211104;
+    color: #C4BC95;
+    border: none;
+    
+    a {
+      color: #C4BC95;
+    }
+}
+.nav-tabs .nav-link{
+   border: none; 
+   border-radius:0;
+}
+.nav-link.active {
+    color:  #211104;
+    background-color: #C4BC95;
+    border:none;
+    border-radius:0;
 }
 </style>

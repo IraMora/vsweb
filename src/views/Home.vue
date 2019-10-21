@@ -1,8 +1,8 @@
 <template>
   <section class="d-flex flex-column justify-content-center">
-    <h2>{{subtitle}}</h2>
-    <h1>{{title}}</h1>
-    <p>Esperando nuestro despertar desde 2008</p>
+    <h2>{{home.subtitle}}</h2>
+    <h1>{{home.title}}</h1>
+    <p>{{home.subtitle2}}</p>
   </section>
 </template>
 
@@ -12,13 +12,14 @@
 // import Manga from '@/components/manga.vue'
 
 export default {
-  // components: { Manga },
-  data () {
-    return {
-      title: 'La Vampire Secta',
-      subtitle: 'Vampire Knight'
+
+  computed: {
+    home(){
+      return this.$store.getters['Default/get_home'];
     }
-  }
+  },
+
+
 }
 
 </script>
