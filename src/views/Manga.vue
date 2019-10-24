@@ -16,7 +16,14 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="vk" role="tabpanel" 
-                aria-labelledby="vk-tab"><VK /></div>
+                aria-labelledby="vk-tab">
+                    <InfoVK />
+                    <div class="row">
+                        <div v-for="numTomo in 19" :key="numTomo" class="col-md-6">
+                            <Tomo :ntomo="numTomo" />
+                        </div>
+                    </div>
+                </div>
                 <div class="tab-pane fade" id="memory" role="tabpanel" 
                 aria-labelledby="memory-tab">Vampire Knight Memories</div>
             </div>  
@@ -25,10 +32,10 @@
 </template>
 <script>
 // @ is an alias to /src
-import VK from '@/components/vk.vue'
-
+import InfoVK from '@/components/infovk.vue'
+import Tomo from '@/components/tomo.vue'
 export default {
-  components: { VK }
+  components: {  InfoVK,  Tomo }
 }
 </script>
 <style lang="scss" scoped>
@@ -55,4 +62,6 @@ ul li{
     border:none;
     border-radius:0;
 }
+.row { margin:0; padding:0;}
+.col-md-6{padding:0;}
 </style>

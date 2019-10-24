@@ -37,7 +37,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family:'Berkshire Swash';
 }
-section{
-  background-color: rgba(196,188,149, 0.75);
-}
+// section{
+//   background-color: rgba(196,188,149, 0.75);
+// }
 </style>
